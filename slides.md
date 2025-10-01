@@ -26,596 +26,515 @@ mdc: true
 Our Wins, Fails & Hard-Earned Lessons at BOSS
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+No-bullshit breakdown of our Q3 AI journey at BOSS
 -->
 
 ---
 transition: fade-out
+class: text-center
 ---
 
-# What is Slidev?
+# What We'll Cover
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+<div grid="~ cols-1 gap-8" class="mt-12">
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+<div v-click="1" class="flex items-center gap-4 text-xl">
+  🚀 <span class="font-semibold text-green-400">The Game Changers</span> - Concrete wins and team deep changes
+</div>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<div v-click="2" class="flex items-center gap-4 text-xl">
+  ⚠️ <span class="font-semibold text-red-400">The Time Thieves</span> - What made us lose hours (and sanity)
+</div>
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+<div v-click="3" class="flex items-center gap-4 text-xl">
+  🎯 <span class="font-semibold text-blue-400">The Takeaways</span> - What we'd do differently tomorrow
+</div>
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+</div>
 
-<!--
-Here is another comment.
--->
+<div v-click="4" class="mt-12 text-lg opacity-75">
+We went all-in on AI in Q3 – and lived to tell the tale
+</div>
 
 ---
-transition: slide-up
-level: 2
+layout: section
+class: text-center
 ---
 
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
-
-## Keyboard Shortcuts
-
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc text-sm minDepth="1" maxDepth="2" />
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```ts [filename-example.ts] {all|4|6|6-7|9|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="342" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-level: 2
----
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
+# 🚀 The Game Changers
+## Concrete wins and team deep changes
 
 ---
 
-# Components
+# Code Way Faster to Write
 
-<div grid="~ cols-2 gap-4">
+<div grid="~ cols-2 gap-8" class="mt-8">
 <div>
 
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
+## Before AI 🐌
+- Writing boilerplate took **hours** and are error-prone
+- We put our ego in our code
+- Starting from scratch every time
 
 </div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
 <div v-click>
 
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
+## With AI 🚀
+- **Most of code** written by AI first-pass
+- More time and distance to be perform critical reviews on-the-fly
+- Very fast refactoring and optimization
 
 </div>
+</div>
 
-<br>
+<div v-click="2" class="mt-6">
+<h2 class="text-xl font-semibold mb-4">🎯 Game Changer: JIRA → PR Magic</h2>
+<div class="p-4 bg-blue-900/20 border border-blue-400/30 rounded">
+<strong>From ticket to working PR in 15 minutes:</strong> With well written tickets, AI reads specs, generates implementation plan, writes code, creates and run tests, and submits PR ready for review
+</div>
+</div>
 
-<v-click>
+---
 
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
+# Automate Boring Tasks
 
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
+<div class="mt-8">
 
-</v-click>
+## What AI Does for Us Now
 
-<div mt-20 v-click>
+<div v-click="1" class="mt-6">
+<h3 class="text-lg font-semibold mb-2">🧪 Test Generation on Autopilot</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Unit tests generated from function signatures</li>
+  <li>Integration tests with realistic mock data</li>
+  <li>Edge cases we never thought of</li>
+</ul>
+</div>
 
-[Learn more](https://sli.dev/guide/animations#click-animation)
+<div v-click="2" class="mt-6">
+<h3 class="text-lg font-semibold mb-2">🏗️ Boilerplate Generation</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>DTOs, interfaces, and type definitions</li>
+  <li>CRUD operations and repository patterns</li>
+  <li>API endpoints with proper validation</li>
+  <li>Database migrations and schema updates</li>
+</ul>
+</div>
+
+<div v-click="3" class="mt-6">
+<h3 class="text-lg font-semibold mb-2">📝 Documentation & Comments</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>JSDoc/TSDoc generated automatically</li>
+  <li>README files that stay up to date</li>
+  <li>API documentation from code annotations</li>
+</ul>
+</div>
+
+<div v-click="4" class="mt-6 p-4 bg-green-900/20 border border-green-400/30 rounded">
+<strong>Time Saved:</strong> ~15 hours/week per developer on mundane tasks
+</div>
 
 </div>
 
 ---
 
-# Motions
+# Team Transformation
 
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
+<div grid="~ cols-2 gap-8" class="mt-8">
+<div>
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
+## Developer Experience 📈
+<div v-click="1" class="space-y-3 text-sm">
+  <div>✅ **Reduced context switching** - AI handles the boring stuff</div>
+  <div>✅ **Faster learning curve** - New tech stack? AI explains it</div>
+  <div>✅ **Creative focus** - More time for actual problem-solving</div>
 </div>
-```
 
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
+</div>
+<div>
+
+## Team Dynamics 🤝
+<div v-click="2" class="space-y-3 text-sm">
+  <div>✅ **Knowledge sharing** improved with AI-generated docs</div>
+  <div>✅ **Junior devs** became productive faster</div>
+  <div>✅ **Senior devs** could focus on architecture</div>
+</div>
+
+</div>
+</div>
+
+<div v-click="3" class="mt-8">
+
+## The Mindset Shift
+<div class="p-4 bg-purple-900/20 border border-purple-400/30 rounded">
+From "AI will replace us" to "AI makes us superhuman developers"
+</div>
+
+</div>
+
+---
+layout: section
+class: text-center
+---
+
+# ⚠️ The Time Thieves
+## What made us lose hours (and sanity)
+
+---
+
+# Review Time Explosion
+
+<div class="mt-8">
+
+<div v-click="1">
+<h2 class="text-xl font-semibold mb-4">🔍 The AI Code Review Crisis</h2>
+<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-6">
+AI generates code fast, but inconsistent patterns across files create review nightmares
+</div>
+</div>
+
+<div v-click="2">
+<h2 class="text-xl font-semibold mb-4">💥 Real War Story: Error Management Hell</h2>
+<div class="grid grid-cols-2 gap-6">
+<div class="p-4 bg-gray-800 rounded">
+<h3 class="font-semibold mb-2 text-red-400">What Happened:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>AI generated different error patterns in each file</li>
+  <li>Some threw exceptions, others returned null</li>
+  <li>Inconsistent logging across 20+ files</li>
+  <li>Review couldn't catch the inconsistencies</li>
+</ul>
+</div>
+<div class="p-4 bg-gray-800 rounded">
+<h3 class="font-semibold mb-2 text-yellow-400">The Aftermath:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Production bugs from silent failures</li>
+  <li>Complete error handling refactor needed</li>
+  <li>3 weeks to standardize across codebase</li>
+  <li>Lost trust in AI-generated patterns</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div v-click="3" class="mt-6 text-center">
+<strong class="text-red-400">Time Lost: ~150 hours + Production incidents</strong>
+</div>
+
+</div>
+
+---
+
+# The Context Switching Nightmare
+
+<div class="mt-8">
+
+<div v-click="1">
+<h2 class="text-xl font-semibold mb-4">🔄 Tool Overload</h2>
+<div class="flex flex-wrap gap-2 mb-4">
+  <span class="px-3 py-1 bg-gray-700 rounded text-sm">GitHub Copilot</span>
+  <span class="px-3 py-1 bg-gray-700 rounded text-sm">ChatGPT</span>
+  <span class="px-3 py-1 bg-gray-700 rounded text-sm">Claude</span>
+  <span class="px-3 py-1 bg-gray-700 rounded text-sm">Cursor</span>
+  <span class="px-3 py-1 bg-gray-700 rounded text-sm">Codeium</span>
+  <span class="px-3 py-1 bg-gray-700 rounded text-sm">+ 5 more...</span>
+</div>
+</div>
+
+<div v-click="2" class="grid grid-cols-2 gap-6">
+<div>
+<h3 class="font-semibold mb-2 text-red-400">The Problems:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Different answers from different AIs</li>
+  <li>Constantly comparing outputs</li>
+  <li>Analysis paralysis on simple tasks</li>
+  <li>Lost focus on actual coding</li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold mb-2 text-green-400">The Solution:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Pick 2 tools max per use case</li>
+  <li>Set "AI-free" focus blocks</li>
+  <li>Trust your instincts first</li>
+  <li>Use AI to validate, not replace thinking</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+---
+
+# Integration with Doctolib Ecosystem
+
+<div class="mt-8 space-y-6">
+
+<div v-click="1">
+<h2 class="text-xl font-semibold mb-4">🎫 JIRA Epic Generation Nightmare</h2>
+<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-4">
+<strong>The Dream:</strong> Generate EPICs with User Stories and subtasks from tech scoping documents
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="p-4 bg-gray-800 rounded">
+<h3 class="font-semibold mb-2 text-red-400">What We Got:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>AI outputs beautiful Markdown</li>
+  <li>JIRA destroys formatting completely</li>
+  <li>Tables become unreadable text blocks</li>
+  <li>Links and references break</li>
+</ul>
+</div>
+<div class="p-4 bg-gray-800 rounded">
+<h3 class="font-semibold mb-2 text-yellow-400">Manual Cleanup:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Reformatting every generated ticket</li>
+  <li>Converting markdown to JIRA syntax</li>
+  <li>Fixing broken cross-references</li>
+  <li>Faster to write tickets manually!</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div v-click="2">
+<h2 class="text-xl font-semibold mb-4">📝 Confluence Template Hell</h2>
+<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-4">
+<strong>The Challenge:</strong> AI struggles with Doctolib's specific page templates and formatting
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="p-4 bg-gray-800 rounded">
+<h3 class="font-semibold mb-2 text-red-400">AI Problems:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Can't follow our custom templates</li>
+  <li>Breaks existing page structure</li>
+  <li>Ignores company style guidelines</li>
+  <li>Updates overwrite manual formatting</li>
+</ul>
+</div>
+<div class="p-4 bg-gray-800 rounded">
+<h3 class="font-semibold mb-2 text-yellow-400">Reality:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Generate content externally first</li>
+  <li>Manual copy-paste and formatting</li>
+  <li>Multiple revision cycles needed</li>
+  <li>Template compliance reviews</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div v-click="3" class="mt-6 p-4 bg-red-900/20 border border-red-400/30 rounded text-center">
+<strong>Lesson Learned:</strong> AI + Legacy Enterprise Tools = Integration Headaches
+</div>
+
+</div>
+
+---
+layout: section
+class: text-center
+---
+
+# 🎯 The Takeaways
+## What we'd do differently tomorrow
+
+---
+
+# Context First
+
+<div class="mt-8">
+
+<div v-click="1">
+<h2 class="text-xl font-semibold mb-4">🧠 Poor Context = 90% of AI Failures</h2>
+<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-6">
+<strong>Hard Truth:</strong> AI doesn't fail because it's stupid. It fails because we give it garbage context.
+</div>
+</div>
+
+<div v-click="2" class="grid grid-cols-2 gap-6">
+<div>
+<h3 class="font-semibold mb-3 text-blue-400">The Context Investment Strategy</h3>
+<div class="space-y-3 text-sm">
+  <div class="p-3 bg-gray-800 rounded">
+    <strong>Internal Knowledge Base</strong>
+    <ul class="list-disc list-inside mt-1 space-y-1">
+      <li>Architecture decisions & patterns</li>
+      <li>Code style guides & conventions</li>
+      <li>Domain-specific business logic</li>
+      <li>Common pitfalls & solutions</li>
+    </ul>
   </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
+  <div class="p-3 bg-gray-800 rounded">
+    <strong>External Documentation Links</strong>
+    <ul class="list-disc list-inside mt-1 space-y-1">
+      <li>Framework docs & best practices</li>
+      <li>API specifications</li>
+      <li>Third-party integration guides</li>
+      <li>Security guidelines</li>
+    </ul>
   </div>
 </div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
-
 </div>
 
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
+<div>
+<h3 class="font-semibold mb-3 text-purple-400">Context Quality Framework</h3>
+<div class="space-y-3">
+  <div class="p-2 bg-green-900/20 border border-green-400/30 rounded text-sm">
+    <strong>✅ Perfect Balance:</strong> 60% internal context + 40% external pointers
   </div>
-</v-drag>
+  <div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded text-sm">
+    <strong>📊 Quality Metrics:</strong> Context relevance > Context volume
+  </div>
+  <div class="p-2 bg-yellow-900/20 border border-yellow-400/30 rounded text-sm">
+    <strong>🔄 Living Document:</strong> Update context as codebase evolves
+  </div>
+</div>
+</div>
+</div>
 
-<img v-drag="'square'" src="https://sli.dev/logo.png">
+<div v-click="3" class="mt-6 p-4 bg-green-900/20 border border-green-400/30 rounded">
+<strong>ROI Reality:</strong> 1 hour invested in context = 10 hours saved in debugging and rework
+</div>
 
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
+</div>
 
 ---
-src: ./pages/imported-slides.md
-hide: false
----
+
+# Documentation as First Class Citizen
+
+<div class="mt-8">
+
+<div v-click="1">
+<h2 class="text-xl font-semibold mb-4">📚 Make Docs the Single Source of Truth</h2>
+<div class="p-4 bg-blue-900/20 border border-blue-400/30 rounded mb-6">
+<strong>Core Principle:</strong> If it's not documented in the project, AI can't use it effectively
+</div>
+</div>
+
+<div class="grid grid-cols-2 gap-6">
+<div v-click="2">
+<h3 class="font-semibold mb-3 text-green-400">Integration Strategy</h3>
+<div class="space-y-3 text-sm">
+  <div class="p-3 bg-gray-800 rounded">
+    <strong>🏠 Co-located Documentation</strong>
+    <ul class="list-disc list-inside mt-1 space-y-1">
+      <li>Docs live alongside code in `/docs`</li>
+      <li>Architecture decisions in `/docs/adr`</li>
+      <li>API specs in `/docs/api`</li>
+      <li>Patterns in `/docs/patterns`</li>
+    </ul>
+  </div>
+  <div class="p-3 bg-gray-800 rounded">
+    <strong>🔗 Smart Pointer System</strong>
+    <ul class="list-disc list-inside mt-1 space-y-1">
+      <li>Context files with direct paths</li>
+      <li>AI can navigate to specific sections</li>
+      <li>No broken external links</li>
+      <li>Version-controlled with code</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div v-click="3">
+<h3 class="font-semibold mb-3 text-purple-400">AI-Optimized Structure</h3>
+<div class="space-y-3 text-sm">
+  <div class="p-2 bg-green-900/20 border border-green-400/30 rounded">
+    <strong>✅ Context Pointers:</strong> "See /docs/patterns/error-handling.md for standards"
+  </div>
+  <div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded">
+    <strong>📋 Searchable Format:</strong> Markdown with clear headings and examples
+  </div>
+  <div class="p-2 bg-yellow-900/20 border border-yellow-400/30 rounded">
+    <strong>🚀 Auto-Discovery:</strong> AI finds relevant docs through file structure
+  </div>
+  <div class="p-2 bg-purple-900/20 border border-purple-400/30 rounded">
+    <strong>🔄 CI/CD Integration:</strong> Docs tested and validated on every PR
+  </div>
+</div>
+</div>
+</div>
+
+<div v-click="4" class="mt-6 p-4 bg-green-900/20 border border-green-400/30 rounded">
+<strong>Game Changer:</strong> AI consistency improved by 80% when docs became project-integrated
+</div>
+
+</div>
 
 ---
 
-# Monaco Editor
+# Knowledge Sharing
 
-Slidev provides built-in Monaco Editor support.
+<div class="mt-6">
 
-Add `{monaco}` to the code block to turn it into an editor:
+<div v-click="1">
+<h2 class="text-xl font-semibold mb-4">🚀 AI Evolves Fast - Stay Connected</h2>
+<div class="p-4 bg-blue-900/20 border border-blue-400/30 rounded mb-6">
+<strong>Reality:</strong> AI landscape changes weekly. Yesterday's best practices are today's anti-patterns.
+</div>
+</div>
 
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
+<div class="grid grid-cols-2 gap-6">
+<div v-click="2">
+<h3 class="font-semibold mb-3 text-green-400">Stay in the Loop</h3>
+<div class="space-y-3 text-sm">
+  <div class="p-3 bg-gray-800 rounded">
+    <strong>🗣️ Join Community Channels</strong>
+    <ul class="list-disc list-inside mt-1 space-y-1">
+      <li><strong>#build-with-ai</strong> - Latest tools & techniques</li>
+      <li>Company AI communities</li>
+      <li>Discord/Reddit AI dev groups</li>
+      <li>Weekly AI newsletters</li>
+    </ul>
+  </div>
+  <div class="p-3 bg-gray-800 rounded">
+    <strong>📚 Learn from Others' REX</strong>
+    <ul class="list-disc list-inside mt-1 space-y-1">
+      <li>Real user experiences > marketing hype</li>
+      <li>Failed experiments teach more than wins</li>
+      <li>Tool comparisons from practitioners</li>
+      <li>Integration war stories</li>
+    </ul>
+  </div>
+</div>
+</div>
 
-const arr = ref(emptyArray(10))
-```
+<div v-click="3">
+<h3 class="font-semibold mb-3 text-purple-400">Share Your Journey</h3>
+<div class="space-y-3 text-sm">
+  <div class="p-2 bg-green-900/20 border border-green-400/30 rounded">
+    <strong>🏠 Internal Sharing:</strong> Team demos, lunch & learns, retrospectives
+  </div>
+  <div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded">
+    <strong>🌍 External Sharing:</strong> Blog posts, conference talks, community contributions
+  </div>
+  <div class="p-2 bg-yellow-900/20 border border-yellow-400/30 rounded">
+    <strong>💡 Document Everything:</strong> Wins, fails, and "meh" experiments
+  </div>
+  <div class="p-2 bg-purple-900/20 border border-purple-400/30 rounded">
+    <strong>🔄 Create Feedback Loops:</strong> Regular AI tool evaluations
+  </div>
+</div>
+</div>
+</div>
 
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
+<div v-click="4" class="mt-6 p-4 bg-green-900/20 border border-green-400/30 rounded text-center">
+<strong>Community Impact:</strong> Our REX helped 3 other teams avoid our JIRA integration mistakes
+</div>
 
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
+</div>
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# Questions?
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+<div class="mt-8 text-lg opacity-75">
+We survived Q3's AI experiment - AMA!
+</div>
 
-<PoweredBySlidev mt-10 />
+<div class="mt-12 text-sm opacity-50">
+Thanks for listening to our AI reality check 🤖
+</div>
