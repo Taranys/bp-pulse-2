@@ -102,16 +102,30 @@ class: text-center
 
 ## What AI Does for Us Now
 
-<div v-click="1" class="mt-6">
+<div grid="~ cols-2 gap-8" class="mt-6">
+<div>
+
+<div v-click="1">
 <h3 class="text-lg font-semibold mb-2">🧪 Test Generation on Autopilot</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Unit tests generated from function signatures</li>
+  <li>Tests generated without bias</li>
   <li>Integration tests with realistic mock data</li>
   <li>Edge cases we never thought of</li>
 </ul>
 </div>
 
-<div v-click="2" class="mt-6">
+<div v-click="3" class="mt-6">
+<h3 class="text-lg font-semibold mb-2">📝 Documentation & Comments</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Update automatically comments alongside the code</li>
+  <li>Project documentation that stay up to date</li>
+</ul>
+</div>
+
+</div>
+<div>
+
+<div v-click="2">
 <h3 class="text-lg font-semibold mb-2">🏗️ Boilerplate Generation</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>DTOs, interfaces, and type definitions</li>
@@ -121,17 +135,7 @@ class: text-center
 </ul>
 </div>
 
-<div v-click="3" class="mt-6">
-<h3 class="text-lg font-semibold mb-2">📝 Documentation & Comments</h3>
-<ul class="list-disc list-inside space-y-1 text-sm">
-  <li>JSDoc/TSDoc generated automatically</li>
-  <li>README files that stay up to date</li>
-  <li>API documentation from code annotations</li>
-</ul>
 </div>
-
-<div v-click="4" class="mt-6 p-4 bg-green-900/20 border border-green-400/30 rounded">
-<strong>Time Saved:</strong> ~15 hours/week per developer on mundane tasks
 </div>
 
 </div>
@@ -145,9 +149,9 @@ class: text-center
 
 ## Developer Experience 📈
 <div v-click="1" class="space-y-3 text-sm">
-  <div>✅ **Reduced context switching** - AI handles the boring stuff</div>
-  <div>✅ **Faster learning curve** - New tech stack? AI explains it</div>
-  <div>✅ **Creative focus** - More time for actual problem-solving</div>
+  <div>✅ Focus on our value - AI handles the boring stuff</div>
+  <div>✅ Faster understanding - Unknown code? AI explains it</div>
+  <div>✅ More concistence in the code - With a good context and some ADRs</div>
 </div>
 
 </div>
@@ -155,9 +159,8 @@ class: text-center
 
 ## Team Dynamics 🤝
 <div v-click="2" class="space-y-3 text-sm">
-  <div>✅ **Knowledge sharing** improved with AI-generated docs</div>
-  <div>✅ **Junior devs** became productive faster</div>
-  <div>✅ **Senior devs** could focus on architecture</div>
+  <div>✅ Knowledge sharing to boost the value we got from AI</div>
+  <div>✅ We take a step back on our tickets</div>
 </div>
 
 </div>
@@ -165,9 +168,9 @@ class: text-center
 
 <div v-click="3" class="mt-8">
 
-## The Mindset Shift
+## Real feedback
 <div class="p-4 bg-purple-900/20 border border-purple-400/30 rounded">
-From "AI will replace us" to "AI makes us superhuman developers"
+I feel like I'm cheating, I took the ticket and it was finished in 20 minutes
 </div>
 
 </div>
@@ -187,57 +190,51 @@ class: text-center
 <div class="mt-8">
 
 <div v-click="1">
-<h2 class="text-xl font-semibold mb-4">🔍 The AI Code Review Crisis</h2>
+<h2 class="text-xl font-semibold mb-4">🔍 The Code Review</h2>
 <div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-6">
-AI generates code fast, but inconsistent patterns across files create review nightmares
+AI generates code fast, but volumes of code, bloated description and inconsistent patterns create review nightmares
 </div>
 </div>
 
 <div v-click="2">
-<h2 class="text-xl font-semibold mb-4">💥 Real War Story: Error Management Hell</h2>
+<h2 class="text-xl font-semibold mb-4">💥 Real Story: Error Management Chaos</h2>
 <div class="grid grid-cols-2 gap-6">
-<div class="p-4 bg-gray-800 rounded">
+<div class="p-4 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-red-400">What Happened:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>AI generated different error patterns in each file</li>
-  <li>Some threw exceptions, others returned null</li>
-  <li>Inconsistent logging across 20+ files</li>
+  <li>AI generated different error patterns across different files</li>
   <li>Review couldn't catch the inconsistencies</li>
 </ul>
 </div>
-<div class="p-4 bg-gray-800 rounded">
+<div class="p-4 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-yellow-400">The Aftermath:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Production bugs from silent failures</li>
-  <li>Complete error handling refactor needed</li>
-  <li>3 weeks to standardize across codebase</li>
-  <li>Lost trust in AI-generated patterns</li>
+  <li>Complex evolution of a feature</li>
+  <li>Error handling refactor needed</li>
+  <li>Creation of an ADR and context updated</li>
 </ul>
 </div>
 </div>
-</div>
-
-<div v-click="3" class="mt-6 text-center">
-<strong class="text-red-400">Time Lost: ~150 hours + Production incidents</strong>
 </div>
 
 </div>
 
 ---
 
-# The Context Switching Nightmare
+# The Tool integration
 
 <div class="mt-8">
 
 <div v-click="1">
 <h2 class="text-xl font-semibold mb-4">🔄 Tool Overload</h2>
 <div class="flex flex-wrap gap-2 mb-4">
-  <span class="px-3 py-1 bg-gray-700 rounded text-sm">GitHub Copilot</span>
-  <span class="px-3 py-1 bg-gray-700 rounded text-sm">ChatGPT</span>
-  <span class="px-3 py-1 bg-gray-700 rounded text-sm">Claude</span>
-  <span class="px-3 py-1 bg-gray-700 rounded text-sm">Cursor</span>
-  <span class="px-3 py-1 bg-gray-700 rounded text-sm">Codeium</span>
-  <span class="px-3 py-1 bg-gray-700 rounded text-sm">+ 5 more...</span>
+  <span class="px-3 py-1 bg-gray-200 rounded text-sm">GitHub</span>
+  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Dust</span>
+  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Claude</span>
+  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Cursor</span>
+  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Confluence</span>
+  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Jira</span>
+  <span class="px-3 py-1 bg-gray-200 rounded text-sm">+ many more...</span>
 </div>
 </div>
 
@@ -245,19 +242,17 @@ AI generates code fast, but inconsistent patterns across files create review nig
 <div>
 <h3 class="font-semibold mb-2 text-red-400">The Problems:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Different answers from different AIs</li>
-  <li>Constantly comparing outputs</li>
-  <li>Analysis paralysis on simple tasks</li>
-  <li>Lost focus on actual coding</li>
+  <li>Different tools working together</li>
+  <li>Current integration never had AI in mind</li>
+  <li>hard to leverage AI on many cases</li>
 </ul>
 </div>
 <div>
 <h3 class="font-semibold mb-2 text-green-400">The Solution:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Pick 2 tools max per use case</li>
-  <li>Set "AI-free" focus blocks</li>
-  <li>Trust your instincts first</li>
-  <li>Use AI to validate, not replace thinking</li>
+  <li>Documentation have more value in your codebase</li>
+  <li>Use AI-compatible tool to leverage it. Mermaid instead of excalidraw in confluence pages</li>
+  <li>Limit the usage of specific layout and prefer markdown</li>
 </ul>
 </div>
 </div>
@@ -276,22 +271,22 @@ AI generates code fast, but inconsistent patterns across files create review nig
 <strong>The Dream:</strong> Generate EPICs with User Stories and subtasks from tech scoping documents
 </div>
 <div class="grid grid-cols-2 gap-6">
-<div class="p-4 bg-gray-800 rounded">
+<div class="p-4 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-red-400">What We Got:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>AI outputs beautiful Markdown</li>
   <li>JIRA destroys formatting completely</li>
   <li>Tables become unreadable text blocks</li>
   <li>Links and references break</li>
+  <li>Useless ticket creation</li>
 </ul>
 </div>
-<div class="p-4 bg-gray-800 rounded">
-<h3 class="font-semibold mb-2 text-yellow-400">Manual Cleanup:</h3>
+<div class="p-4 bg-gray-200 rounded">
+<h3 class="font-semibold mb-2 text-yellow-400">Manual creation:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Reformatting every generated ticket</li>
-  <li>Converting markdown to JIRA syntax</li>
-  <li>Fixing broken cross-references</li>
-  <li>Faster to write tickets manually!</li>
+  <li>Generate all tickets on .md files</li>
+  <li>Creating JIRA tickets and copy/paste content</li>
+  <li>Ticket description very bloated sometimes</li>
 </ul>
 </div>
 </div>
