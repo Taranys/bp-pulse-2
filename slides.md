@@ -252,7 +252,7 @@ AI generates code fast, but volumes of code, bloated description and inconsisten
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>Documentation have more value in your codebase</li>
   <li>Use AI-compatible tool to leverage it. Mermaid instead of excalidraw in confluence pages</li>
-  <li>Limit the usage of specific layout and prefer markdown</li>
+  <li>Limit the usage of specific formatting and prefer markdown</li>
 </ul>
 </div>
 </div>
@@ -261,16 +261,18 @@ AI generates code fast, but volumes of code, bloated description and inconsisten
 
 ---
 
-# Integration with Doctolib Ecosystem
+# JIRA Epic Generation Nightmare
 
-<div class="mt-8 space-y-6">
+<div class="mt-8">
 
 <div v-click="1">
-<h2 class="text-xl font-semibold mb-4">🎫 JIRA Epic Generation Nightmare</h2>
-<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-4">
+<h2 class="text-xl font-semibold mb-4">🎫 The Dream vs Reality</h2>
+<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-6">
 <strong>The Dream:</strong> Generate EPICs with User Stories and subtasks from tech scoping documents
 </div>
-<div class="grid grid-cols-2 gap-6">
+</div>
+
+<div v-click="2" class="grid grid-cols-2 gap-6">
 <div class="p-4 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-red-400">What We Got:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
@@ -282,7 +284,7 @@ AI generates code fast, but volumes of code, bloated description and inconsisten
 </ul>
 </div>
 <div class="p-4 bg-gray-200 rounded">
-<h3 class="font-semibold mb-2 text-yellow-400">Manual creation:</h3>
+<h3 class="font-semibold mb-2 text-yellow-400">Manual Creation:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>Generate all tickets on .md files</li>
   <li>Creating JIRA tickets and copy/paste content</li>
@@ -290,37 +292,38 @@ AI generates code fast, but volumes of code, bloated description and inconsisten
 </ul>
 </div>
 </div>
+
 </div>
 
-<div v-click="2">
-<h2 class="text-xl font-semibold mb-4">📝 Confluence Template Hell</h2>
-<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-4">
-<strong>The Challenge:</strong> AI struggles with Doctolib's specific page templates and formatting
+---
+
+# Confluence Template Hell
+
+<div class="mt-8">
+
+<div v-click="1">
+<h2 class="text-xl font-semibold mb-4">📝 The Confluence formatting</h2>
+<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-6">
+<strong>The Dream:</strong> Generate all of our documentation from our actual codebase
 </div>
-<div class="grid grid-cols-2 gap-6">
-<div class="p-4 bg-gray-800 rounded">
+</div>
+
+<div v-click="2" class="grid grid-cols-2 gap-6">
+<div class="p-4 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-red-400">AI Problems:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Can't follow our custom templates</li>
+  <li>Can't follow our custom templates (Tech scoping for example)</li>
   <li>Breaks existing page structure</li>
   <li>Ignores company style guidelines</li>
-  <li>Updates overwrite manual formatting</li>
 </ul>
 </div>
-<div class="p-4 bg-gray-800 rounded">
-<h3 class="font-semibold mb-2 text-yellow-400">Reality:</h3>
+<div class="p-4 bg-gray-200 rounded">
+<h3 class="font-semibold mb-2 text-yellow-400">Our current situation:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Generate content externally first</li>
-  <li>Manual copy-paste and formatting</li>
-  <li>Multiple revision cycles needed</li>
-  <li>Template compliance reviews</li>
+  <li>Keep the official document in confluence by leveraging AI to write it</li>
+  <li>Keep technical documentation inside of our repository</li>
 </ul>
 </div>
-</div>
-</div>
-
-<div v-click="3" class="mt-6 p-4 bg-red-900/20 border border-red-400/30 rounded text-center">
-<strong>Lesson Learned:</strong> AI + Legacy Enterprise Tools = Integration Headaches
 </div>
 
 </div>
@@ -331,17 +334,17 @@ class: text-center
 ---
 
 # 🎯 The Takeaways
-## What we'd do differently tomorrow
+## What are we doing differently
 
 ---
 
 # Context First
 
-<div class="mt-8">
+<div class="mt-2">
 
 <div v-click="1">
 <h2 class="text-xl font-semibold mb-4">🧠 Poor Context = 90% of AI Failures</h2>
-<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-6">
+<div class="p-2 bg-red-900/20 border border-red-400/30 rounded mb-2">
 <strong>Hard Truth:</strong> AI doesn't fail because it's stupid. It fails because we give it garbage context.
 </div>
 </div>
@@ -350,33 +353,18 @@ class: text-center
 <div>
 <h3 class="font-semibold mb-3 text-blue-400">The Context Investment Strategy</h3>
 <div class="space-y-3 text-sm">
-  <div class="p-3 bg-gray-800 rounded">
-    <strong>Internal Knowledge Base</strong>
+  <div class="p-3 bg-gray-200 rounded">
+    <strong>General context</strong>
     <ul class="list-disc list-inside mt-1 space-y-1">
-      <li>Architecture decisions & patterns</li>
-      <li>Code style guides & conventions</li>
-      <li>Domain-specific business logic</li>
-      <li>Common pitfalls & solutions</li>
+      <li>Main commands</li>
+      <li>Principales guidelines and ADRs links</li>
+      <li>Technical stack</li>
+      <li>Link to other docs with context</li>
     </ul>
   </div>
-  <div class="p-3 bg-gray-800 rounded">
-    <strong>External Documentation Links</strong>
-    <ul class="list-disc list-inside mt-1 space-y-1">
-      <li>Framework docs & best practices</li>
-      <li>API specifications</li>
-      <li>Third-party integration guides</li>
-      <li>Security guidelines</li>
-    </ul>
-  </div>
-</div>
 </div>
 
-<div>
-<h3 class="font-semibold mb-3 text-purple-400">Context Quality Framework</h3>
-<div class="space-y-3">
-  <div class="p-2 bg-green-900/20 border border-green-400/30 rounded text-sm">
-    <strong>✅ Perfect Balance:</strong> 60% internal context + 40% external pointers
-  </div>
+<div class="space-y-3 py-3">
   <div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded text-sm">
     <strong>📊 Quality Metrics:</strong> Context relevance > Context volume
   </div>
@@ -385,73 +373,70 @@ class: text-center
   </div>
 </div>
 </div>
-</div>
 
-<div v-click="3" class="mt-6 p-4 bg-green-900/20 border border-green-400/30 rounded">
-<strong>ROI Reality:</strong> 1 hour invested in context = 10 hours saved in debugging and rework
+<div>
+<h3 class="font-semibold mb-3 text-green-400">Other Documentation Links</h3>
+<div class="p-3 bg-gray-200 rounded">
+  <ul class="list-disc list-inside space-y-1 text-sm">
+    <li>Domain-specific business logic</li>
+    <li>Common pitfalls & solutions</li>
+    <li>Framework docs & best practices</li>
+    <li>API specifications</li>
+    <li>Third-party integration guides</li>
+    <li>Security guidelines</li>
+    <li>...</li>
+  </ul>
+</div>
+</div>
 </div>
 
 </div>
 
 ---
 
-# Documentation as First Class Citizen
+# Documentation as living part of the code
 
-<div class="mt-8">
+<div class="mt-2">
 
 <div v-click="1">
-<h2 class="text-xl font-semibold mb-4">📚 Make Docs the Single Source of Truth</h2>
-<div class="p-4 bg-blue-900/20 border border-blue-400/30 rounded mb-6">
-<strong>Core Principle:</strong> If it's not documented in the project, AI can't use it effectively
+<h2 class="text-xl font-semibold mb-2">🎯 Structure Your Docs for AI Success</h2>
+<div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded">
+<strong>Goal:</strong> Make documentation that AI can easily parse, understand, and leverage
 </div>
 </div>
 
-<div class="grid grid-cols-2 gap-6">
-<div v-click="2">
-<h3 class="font-semibold mb-3 text-green-400">Integration Strategy</h3>
+<div v-click="2" class="grid grid-cols-2 gap-6">
+<div>
+<h3 class="font-semibold mb-3 text-green-400">Format & Structure</h3>
 <div class="space-y-3 text-sm">
-  <div class="p-3 bg-gray-800 rounded">
-    <strong>🏠 Co-located Documentation</strong>
-    <ul class="list-disc list-inside mt-1 space-y-1">
-      <li>Docs live alongside code in `/docs`</li>
-      <li>Architecture decisions in `/docs/adr`</li>
-      <li>API specs in `/docs/api`</li>
-      <li>Patterns in `/docs/patterns`</li>
-    </ul>
+  <div class="p-2 bg-orange-900/20 border border-green-400/30 rounded">
+    <strong>📋 Co-located Documentation :</strong> All docs live alongside in a dedicated directory (/docs, /docs/adr/, ...)
   </div>
-  <div class="p-3 bg-gray-800 rounded">
-    <strong>🔗 Smart Pointer System</strong>
-    <ul class="list-disc list-inside mt-1 space-y-1">
-      <li>Context files with direct paths</li>
-      <li>AI can navigate to specific sections</li>
-      <li>No broken external links</li>
-      <li>Version-controlled with code</li>
-    </ul>
-  </div>
-</div>
-</div>
-
-<div v-click="3">
-<h3 class="font-semibold mb-3 text-purple-400">AI-Optimized Structure</h3>
-<div class="space-y-3 text-sm">
   <div class="p-2 bg-green-900/20 border border-green-400/30 rounded">
-    <strong>✅ Context Pointers:</strong> "See /docs/patterns/error-handling.md for standards"
+    <strong>📋 Searchable Format:</strong> Markdown with clear headings and examples, Mermaid for the schemas
   </div>
   <div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded">
-    <strong>📋 Searchable Format:</strong> Markdown with clear headings and examples
-  </div>
-  <div class="p-2 bg-yellow-900/20 border border-yellow-400/30 rounded">
     <strong>🚀 Auto-Discovery:</strong> AI finds relevant docs through file structure
   </div>
   <div class="p-2 bg-purple-900/20 border border-purple-400/30 rounded">
-    <strong>🔄 CI/CD Integration:</strong> Docs tested and validated on every PR
+    <strong>🔄 CI/CD Integration:</strong> Docs updated and validated regularly
   </div>
 </div>
 </div>
-</div>
 
-<div v-click="4" class="mt-6 p-4 bg-green-900/20 border border-green-400/30 rounded">
-<strong>Game Changer:</strong> AI consistency improved by 80% when docs became project-integrated
+<div>
+<h3 class="font-semibold mb-3 text-purple-400">Context Linking</h3>
+<div class="space-y-3 text-sm">
+  <div class="p-3 bg-gray-200 rounded">
+    <strong>✅ Context Pointers Examples:</strong>
+    <ul class="list-disc list-inside mt-1 space-y-1">
+      <li>"See /docs/patterns/error-handling.md for standards"</li>
+      <li>"Check /docs/adr/012-authentication.md for auth patterns"</li>
+      <li>"Follow /docs/api/validation.md for input validation"</li>
+    </ul>
+  </div>
+</div>
+</div>
 </div>
 
 </div>
@@ -464,8 +449,8 @@ class: text-center
 
 <div v-click="1">
 <h2 class="text-xl font-semibold mb-4">🚀 AI Evolves Fast - Stay Connected</h2>
-<div class="p-4 bg-blue-900/20 border border-blue-400/30 rounded mb-6">
-<strong>Reality:</strong> AI landscape changes weekly. Yesterday's best practices are today's anti-patterns.
+<div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded mb-2">
+<strong>Reality:</strong> AI landscape changes weekly, especially at Doctolib. Yesterday's best practices are today's anti-patterns.
 </div>
 </div>
 
@@ -473,22 +458,17 @@ class: text-center
 <div v-click="2">
 <h3 class="font-semibold mb-3 text-green-400">Stay in the Loop</h3>
 <div class="space-y-3 text-sm">
-  <div class="p-3 bg-gray-800 rounded">
+  <div class="p-3 bg-gray-200 rounded">
     <strong>🗣️ Join Community Channels</strong>
     <ul class="list-disc list-inside mt-1 space-y-1">
       <li><strong>#build-with-ai</strong> - Latest tools & techniques</li>
-      <li>Company AI communities</li>
-      <li>Discord/Reddit AI dev groups</li>
-      <li>Weekly AI newsletters</li>
     </ul>
   </div>
-  <div class="p-3 bg-gray-800 rounded">
-    <strong>📚 Learn from Others' REX</strong>
+  <div class="p-3 bg-gray-200 rounded">
+    <strong>📚 Learn from Others' XP</strong>
     <ul class="list-disc list-inside mt-1 space-y-1">
-      <li>Real user experiences > marketing hype</li>
       <li>Failed experiments teach more than wins</li>
-      <li>Tool comparisons from practitioners</li>
-      <li>Integration war stories</li>
+      <li>Pair-sharing inside your team / domain</li>
     </ul>
   </div>
 </div>
@@ -498,10 +478,7 @@ class: text-center
 <h3 class="font-semibold mb-3 text-purple-400">Share Your Journey</h3>
 <div class="space-y-3 text-sm">
   <div class="p-2 bg-green-900/20 border border-green-400/30 rounded">
-    <strong>🏠 Internal Sharing:</strong> Team demos, lunch & learns, retrospectives
-  </div>
-  <div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded">
-    <strong>🌍 External Sharing:</strong> Blog posts, conference talks, community contributions
+    <strong>🏠 Internal Sharing:</strong> Team demos, BP Pulse, Tech time
   </div>
   <div class="p-2 bg-yellow-900/20 border border-yellow-400/30 rounded">
     <strong>💡 Document Everything:</strong> Wins, fails, and "meh" experiments
@@ -511,10 +488,6 @@ class: text-center
   </div>
 </div>
 </div>
-</div>
-
-<div v-click="4" class="mt-6 p-4 bg-green-900/20 border border-green-400/30 rounded text-center">
-<strong>Community Impact:</strong> Our REX helped 3 other teams avoid our JIRA integration mistakes
 </div>
 
 </div>
