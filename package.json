@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build --out docs",
+    "build": "slidev build --out docs --base /bp-pulse-2/",
     "dev": "slidev --open",
     "export": "slidev export"
   },
