@@ -493,16 +493,15 @@ class: text-center
 </div>
 
 ---
-layout: center
+layout: cover
 class: text-center
+background: https://images.unsplash.com/photo-1665789318391-6057c533005e?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
 # Questions?
 
-<div class="mt-8 text-lg opacity-75">
-We survived Q3's AI experiment - AMA!
-</div>
-
-<div class="mt-12 text-sm opacity-50">
+<div class="mt-6 text-sm opacity-50">
 Thanks for listening to our AI reality check 🤖
 </div>
+
+<img src="/QrCode.png" alt="QR Code" class="absolute bottom-4 right-4 w-32 h-32 bg-white p-2 rounded" />
