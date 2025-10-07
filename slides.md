@@ -52,10 +52,6 @@ class: text-center
 
 </div>
 
-<div v-click="4" class="mt-12 text-lg opacity-75">
-We went all-in on AI in Q3 – and lived to tell the tale
-</div>
-
 ---
 layout: section
 class: text-center
@@ -100,8 +96,6 @@ class: text-center
 
 <div class="mt-8">
 
-## What AI Does for Us Now
-
 <div grid="~ cols-2 gap-8" class="mt-6">
 <div>
 
@@ -138,39 +132,10 @@ class: text-center
 </div>
 </div>
 
+<div v-click="3">
+<div class="p-4 bg-purple-900/20 border border-purple-400/30 rounded font-(family-name:Roboto)">
+🎙️ I feel like I'm cheating, I took the ticket and it was finished in 20 minutes
 </div>
-
----
-
-# Team Transformation
-
-<div grid="~ cols-2 gap-8" class="mt-8">
-<div>
-
-## Developer Experience 📈
-<div v-click="1" class="space-y-3 text-sm">
-  <div>✅ Focus on our value - AI handles the boring stuff</div>
-  <div>✅ Faster understanding - Unknown code? AI explains it</div>
-  <div>✅ More concistence in the code - With a good context and some ADRs</div>
-</div>
-
-</div>
-<div>
-
-## Team Dynamics 🤝
-<div v-click="2" class="space-y-3 text-sm">
-  <div>✅ Knowledge sharing to boost the value we got from AI</div>
-  <div>✅ We take a step back on our tickets</div>
-</div>
-
-</div>
-</div>
-
-<div v-click="3" class="mt-8">
-
-## Real feedback
-<div class="p-4 bg-purple-900/20 border border-purple-400/30 rounded">
-I feel like I'm cheating, I took the ticket and it was finished in 20 minutes
 </div>
 
 </div>
@@ -186,8 +151,6 @@ class: text-center
 ---
 
 # Review Time Explosion
-
-<div class="mt-8">
 
 <div v-click="1">
 <h2 class="text-xl font-semibold mb-4">🔍 The Code Review</h2>
@@ -215,48 +178,6 @@ AI generates code fast, but volumes of code, bloated description and inconsisten
 </ul>
 </div>
 </div>
-</div>
-
-</div>
-
----
-
-# The Tool integration
-
-<div class="mt-8">
-
-<div v-click="1">
-<h2 class="text-xl font-semibold mb-4">🔄 Tool Overload</h2>
-<div class="flex flex-wrap gap-2 mb-4">
-  <span class="px-3 py-1 bg-gray-200 rounded text-sm">GitHub</span>
-  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Dust</span>
-  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Claude</span>
-  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Cursor</span>
-  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Confluence</span>
-  <span class="px-3 py-1 bg-gray-200 rounded text-sm">Jira</span>
-  <span class="px-3 py-1 bg-gray-200 rounded text-sm">+ many more...</span>
-</div>
-</div>
-
-<div v-click="2" class="grid grid-cols-2 gap-6">
-<div>
-<h3 class="font-semibold mb-2 text-red-400">The Problems:</h3>
-<ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Different tools working together</li>
-  <li>Current integration never had AI in mind</li>
-  <li>hard to leverage AI on many cases</li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold mb-2 text-green-400">The Solution:</h3>
-<ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Documentation have more value in your codebase</li>
-  <li>Use AI-compatible tool to leverage it. Mermaid instead of excalidraw in confluence pages</li>
-  <li>Limit the usage of specific formatting and prefer markdown</li>
-</ul>
-</div>
-</div>
-
 </div>
 
 ---
@@ -334,16 +255,16 @@ Should we include implementation details in tickets for AI code generation?
 
 <div v-click="2" class="grid grid-cols-2 gap-4 mb-4">
 <div class="p-3 bg-gray-200 rounded">
-<h3 class="font-semibold mb-2 text-red-400 text-sm">The Problems:</h3>
-<ul class="list-disc list-inside space-y-1 text-xs">
+<h3 class="font-semibold mb-2 text-red-400">The Problems:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
   <li>Time consuming to manage tickets with code</li>
   <li>Grooming = code review, not solution discussion</li>
   <li>Code changes break ticket synchronization</li>
 </ul>
 </div>
 <div class="p-3 bg-gray-200 rounded">
-<h3 class="font-semibold mb-2 text-yellow-400 text-sm">Current Approach:</h3>
-<ul class="list-disc list-inside space-y-1 text-xs">
+<h3 class="font-semibold mb-2 text-yellow-400">Current Approach:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
   <li>Remove implementation from tickets</li>
   <li>Developer implements when taking ticket</li>
   <li>Provide enough context for AI generation</li>
@@ -352,46 +273,12 @@ Should we include implementation details in tickets for AI code generation?
 </div>
 
 <div v-click="3" class="p-3 bg-purple-900/20 border border-purple-400/30 rounded">
-<h3 class="font-semibold mb-2 text-green-400 text-sm">💡 Potential Leads to Explore:</h3>
-<ul class="list-disc list-inside space-y-1 text-xs">
-  <li>Remove grooming ritual entirely</li>
+<h3 class="font-semibold mb-2 text-green-400">💡 TLDR; We need to change our process:</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+  <li>Remove / Revamp grooming ritual entirely</li>
   <li>Remove subtasks (only for progress tracking)</li>
   <li>Pair or mob programming for ticket/code generation</li>
-  <li>⚠️ Would require organizational changes</li>
 </ul>
-</div>
-
-</div>
-
----
-
-# Confluence Template Hell
-
-<div class="mt-8">
-
-<div v-click="1">
-<h2 class="text-xl font-semibold mb-4">📝 The Confluence formatting</h2>
-<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-6">
-<strong>The Dream:</strong> Generate all of our documentation from our actual codebase
-</div>
-</div>
-
-<div v-click="2" class="grid grid-cols-2 gap-6">
-<div class="p-4 bg-gray-200 rounded">
-<h3 class="font-semibold mb-2 text-red-400">AI Problems:</h3>
-<ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Can't follow our custom templates (Tech scoping for example)</li>
-  <li>Breaks existing page structure</li>
-  <li>Ignores company style guidelines</li>
-</ul>
-</div>
-<div class="p-4 bg-gray-200 rounded">
-<h3 class="font-semibold mb-2 text-yellow-400">Our current situation:</h3>
-<ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Keep the official document in confluence by leveraging AI to write it</li>
-  <li>Keep technical documentation inside of our repository</li>
-</ul>
-</div>
 </div>
 
 </div>
@@ -448,11 +335,8 @@ class: text-center
   <ul class="list-disc list-inside space-y-1 text-sm">
     <li>Domain-specific business logic</li>
     <li>Common pitfalls & solutions</li>
-    <li>Framework docs & best practices</li>
-    <li>API specifications</li>
-    <li>Third-party integration guides</li>
+    <li>Framework / APIs docs & best practices</li>
     <li>Security guidelines</li>
-    <li>...</li>
   </ul>
 </div>
 </div>
