@@ -261,36 +261,104 @@ AI generates code fast, but volumes of code, bloated description and inconsisten
 
 ---
 
-# JIRA Epic Generation Nightmare
+# JIRA Epic Generation - The Dream
 
 <div class="mt-8">
 
 <div v-click="1">
-<h2 class="text-xl font-semibold mb-4">🎫 The Dream vs Reality</h2>
-<div class="p-4 bg-red-900/20 border border-red-400/30 rounded mb-6">
-<strong>The Dream:</strong> Generate EPICs with User Stories and subtasks from tech scoping documents
+<div class="p-4 bg-blue-900/20 border border-blue-400/30 rounded mb-6">
+From tech scoping document → Full JIRA Epic structure automatically
 </div>
 </div>
 
-<div v-click="2" class="grid grid-cols-2 gap-6">
+<div v-click="2" class="space-y-4">
 <div class="p-4 bg-gray-200 rounded">
-<h3 class="font-semibold mb-2 text-red-400">What We Got:</h3>
+<h3 class="font-semibold mb-2 text-blue-400">Expected Workflow:</h3>
+<ul class="list-disc list-inside space-y-2 text-sm">
+  <li>📄 Start with tech scoping document</li>
+  <li>🎯 Generate 1 JIRA ticket for each User Story</li>
+  <li>✅ Generate 1 JIRA ticket for each subtask</li>
+  <li>🔗 All task tickets linked with implementation proposal</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+---
+
+# JIRA Epic Generation - Reality Check
+
+<div class="mt-8">
+
+<div class="grid grid-cols-2 gap-6 mb-6">
+<div class="p-4 bg-gray-200 rounded">
+<h3 class="font-semibold mb-2 text-red-400">The Problems:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>AI outputs beautiful Markdown</li>
-  <li>JIRA destroys formatting completely</li>
-  <li>Tables become unreadable text blocks</li>
-  <li>Links and references break</li>
-  <li>Useless ticket creation</li>
+  <li>Very slow to read/write tickets via MCP</li>
+  <li>AI loses information during create/update (even with explicit checks!)</li>
+  <li>Tickets are inconsistent across the epic</li>
+  <li>MCP cannot add links between tickets</li>
+  <li>Missing mandatory fields block ticket creation</li>
 </ul>
 </div>
 <div class="p-4 bg-gray-200 rounded">
-<h3 class="font-semibold mb-2 text-yellow-400">Manual Creation:</h3>
+<h3 class="font-semibold mb-2 text-yellow-400">How We Mitigated:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
-  <li>Generate all tickets on .md files</li>
-  <li>Creating JIRA tickets and copy/paste content</li>
-  <li>Ticket description very bloated sometimes</li>
+  <li>Create local .md file cache to reduce slow MCP read/write</li>
+  <li>Copy-paste from AI response (bypass MCP entirely)</li>
+  <li>Create template files for US/tasks to enforce consistency</li>
+  <li>Add links manually in a dedicated description section</li>
+  <li>Provide an example ticket as base template with mandatory fields</li>
 </ul>
 </div>
+</div>
+
+<div v-click="3" class="p-4 bg-purple-900/20 border border-purple-400/30 rounded">
+<strong>The Reality:</strong> Despite workarounds, JIRA ticket generation remains a manual, time-consuming process 😮‍💨
+</div>
+
+</div>
+
+---
+
+# Implementation in Tickets - The Dilemma
+
+<div class="mt-4">
+
+<div v-click="1">
+<div class="p-3 bg-blue-900/20 border border-blue-400/30 rounded mb-4 text-sm">
+Should we include implementation details in tickets for AI code generation?
+</div>
+</div>
+
+<div v-click="2" class="grid grid-cols-2 gap-4 mb-4">
+<div class="p-3 bg-gray-200 rounded">
+<h3 class="font-semibold mb-2 text-red-400 text-sm">The Problems:</h3>
+<ul class="list-disc list-inside space-y-1 text-xs">
+  <li>Time consuming to manage tickets with code</li>
+  <li>Grooming = code review, not solution discussion</li>
+  <li>Code changes break ticket synchronization</li>
+</ul>
+</div>
+<div class="p-3 bg-gray-200 rounded">
+<h3 class="font-semibold mb-2 text-yellow-400 text-sm">Current Approach:</h3>
+<ul class="list-disc list-inside space-y-1 text-xs">
+  <li>Remove implementation from tickets</li>
+  <li>Developer implements when taking ticket</li>
+  <li>Provide enough context for AI generation</li>
+</ul>
+</div>
+</div>
+
+<div v-click="3" class="p-3 bg-purple-900/20 border border-purple-400/30 rounded">
+<h3 class="font-semibold mb-2 text-green-400 text-sm">💡 Potential Leads to Explore:</h3>
+<ul class="list-disc list-inside space-y-1 text-xs">
+  <li>Remove grooming ritual entirely</li>
+  <li>Remove subtasks (only for progress tracking)</li>
+  <li>Pair or mob programming for ticket/code generation</li>
+  <li>⚠️ Would require organizational changes</li>
+</ul>
 </div>
 
 </div>
