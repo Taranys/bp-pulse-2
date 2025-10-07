@@ -305,11 +305,10 @@ class: text-center
 
 <div v-click="2" class="grid grid-cols-2 gap-6">
 <div>
-<h3 class="font-semibold mb-3 text-blue-400">The Context Investment Strategy</h3>
 <div class="space-y-3 text-sm">
-  <div class="p-3 bg-gray-200 rounded">
-    <strong>General context</strong>
-    <ul class="list-disc list-inside mt-1 space-y-1">
+<div class="p-3 bg-gray-200 rounded">
+<h3 class="font-semibold mb-2 text-red-400">General context</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
       <li>Main commands</li>
       <li>Principales guidelines and ADRs links</li>
       <li>Technical stack</li>
@@ -317,7 +316,22 @@ class: text-center
     </ul>
   </div>
 </div>
+</div>
 
+<div>
+<div class="p-3 bg-gray-200 rounded">
+<h3 class="font-semibold mb-2 text-red-400">Other documentation</h3>
+<ul class="list-disc list-inside space-y-1 text-sm">
+    <li>Domain-specific business logic</li>
+    <li>Common pitfalls & solutions</li>
+    <li>Framework / APIs docs & best practices</li>
+    <li>Security guidelines</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div v-click="3" class="mt-2">
 <div class="space-y-3 py-3">
   <div class="p-2 bg-blue-900/20 border border-blue-400/30 rounded text-sm">
     <strong>📊 Quality Metrics:</strong> Context relevance > Context volume
@@ -325,19 +339,6 @@ class: text-center
   <div class="p-2 bg-yellow-900/20 border border-yellow-400/30 rounded text-sm">
     <strong>🔄 Living Document:</strong> Update context as codebase evolves
   </div>
-</div>
-</div>
-
-<div>
-<h3 class="font-semibold mb-3 text-green-400">Other Documentation Links</h3>
-<div class="p-3 bg-gray-200 rounded">
-  <ul class="list-disc list-inside space-y-1 text-sm">
-    <li>Domain-specific business logic</li>
-    <li>Common pitfalls & solutions</li>
-    <li>Framework / APIs docs & best practices</li>
-    <li>Security guidelines</li>
-  </ul>
-</div>
 </div>
 </div>
 
