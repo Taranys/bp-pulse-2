@@ -197,8 +197,7 @@ From tech scoping document → Full JIRA Epic structure automatically
 <h3 class="font-semibold mb-2 text-blue-400">Expected Workflow:</h3>
 <ul class="list-disc list-inside space-y-2 text-sm">
   <li>📄 Start with tech scoping document</li>
-  <li>🎯 Generate 1 JIRA ticket for each User Story</li>
-  <li>✅ Generate 1 JIRA ticket for each subtask</li>
+  <li>✅ Generate all needed JIRA tickets (User Stories + subtasks)</li>
   <li>🔗 All task tickets linked with implementation proposal</li>
 </ul>
 </div>
