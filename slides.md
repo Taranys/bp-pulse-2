@@ -99,7 +99,7 @@ class: text-center
 <div grid="~ cols-2 gap-8" class="mt-6">
 <div>
 
-<div v-click="1">
+<div>
 <h3 class="text-lg font-semibold mb-2">🧪 Test Generation on Autopilot</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>Tests generated without bias</li>
@@ -108,7 +108,7 @@ class: text-center
 </ul>
 </div>
 
-<div v-click="3" class="mt-6">
+<div v-click="1" class="mt-6">
 <h3 class="text-lg font-semibold mb-2">📝 Documentation & Comments</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>Update automatically comments alongside the code</li>
@@ -234,7 +234,7 @@ From tech scoping document → Full JIRA Epic structure automatically
 </div>
 </div>
 
-<div v-click="3" class="p-4 bg-purple-900/20 border border-purple-400/30 rounded">
+<div v-click="1" class="p-4 bg-purple-900/20 border border-purple-400/30 rounded">
 <strong>The Reality:</strong> Despite workarounds, JIRA ticket generation remains a manual, time-consuming process 😮‍💨
 </div>
 
