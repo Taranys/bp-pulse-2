@@ -19,6 +19,7 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+favicon: 'https://www.doctolib.fr/icon_patient/180x180.png'
 ---
 
 # AI Reality Check
