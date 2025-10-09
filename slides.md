@@ -187,13 +187,13 @@ AI generates code fast, but volumes of code, bloated description and inconsisten
 
 <div class="mt-8">
 
-<div v-click="1">
+<div>
 <div class="p-4 bg-blue-900/20 border border-blue-400/30 rounded mb-6">
 From tech scoping document → Full JIRA Epic structure automatically
 </div>
 </div>
 
-<div v-click="2" class="space-y-4">
+<div v-click="1" class="space-y-4">
 <div class="p-4 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-blue-400">Expected Workflow:</h3>
 <ul class="list-disc list-inside space-y-2 text-sm">
@@ -213,7 +213,7 @@ From tech scoping document → Full JIRA Epic structure automatically
 <div class="mt-8">
 
 <div class="grid grid-cols-2 gap-6 mb-6">
-<div class="p-4 bg-gray-200 rounded">
+<div v-click="1" class="p-4 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-red-400">The Problems:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>Very slow to read/write tickets via MCP</li>
@@ -223,7 +223,7 @@ From tech scoping document → Full JIRA Epic structure automatically
   <li>Missing mandatory fields block ticket creation</li>
 </ul>
 </div>
-<div class="p-4 bg-gray-200 rounded">
+<div v-click="2" class="p-4 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-yellow-400">How We Mitigated:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>Create local .md file cache to reduce slow MCP read/write</li>
@@ -235,7 +235,7 @@ From tech scoping document → Full JIRA Epic structure automatically
 </div>
 </div>
 
-<div v-click="1" class="p-4 bg-purple-900/20 border border-purple-400/30 rounded">
+<div v-click="3" class="p-4 bg-purple-900/20 border border-purple-400/30 rounded">
 <strong>The Reality:</strong> Despite workarounds, JIRA ticket generation remains a manual, time-consuming process 😮‍💨
 </div>
 
@@ -247,13 +247,13 @@ From tech scoping document → Full JIRA Epic structure automatically
 
 <div class="mt-4">
 
-<div v-click="1">
+<div>
 <div class="p-3 bg-blue-900/20 border border-blue-400/30 rounded mb-4 text-sm">
 Should we include implementation details in tickets for AI code generation?
 </div>
 </div>
 
-<div v-click="2" class="grid grid-cols-2 gap-4 mb-4">
+<div v-click="1" class="grid grid-cols-2 gap-4 mb-4">
 <div class="p-3 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-red-400">The Problems:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
@@ -262,7 +262,7 @@ Should we include implementation details in tickets for AI code generation?
   <li>Code changes break ticket synchronization</li>
 </ul>
 </div>
-<div class="p-3 bg-gray-200 rounded">
+<div v-click="2" class="p-3 bg-gray-200 rounded">
 <h3 class="font-semibold mb-2 text-yellow-400">Current Approach:</h3>
 <ul class="list-disc list-inside space-y-1 text-sm">
   <li>Remove implementation from tickets</li>
